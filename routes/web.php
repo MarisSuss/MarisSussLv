@@ -1,18 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LanguageController;
+use App\Http\Controllers\HomeController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
+// Redirect to the default language
 Route::get('/', function () {
-    return view('home');
-});
+    return redirect('/{language}');
+})->name('home');
+
+// Change the language
+Route::post('/{language}/change-language', LanguageController::class);
+
+// Group all routes and give them a prefix of the first segment as $language
+Route::group(['prefix' => '{language}'], function () {
+
+    // Home page
+    Route::get('/', HomeController::class);
+
+})->where([
+    'language' => 'lv|en',
+]);
