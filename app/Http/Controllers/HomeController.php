@@ -12,4 +12,11 @@ class HomeController extends Controller
             'language' => $language
         ]);
     }
+
+    public function index($language)
+    {
+        return view('home', [
+            'language' => $language
+        ]);
+    }
 }

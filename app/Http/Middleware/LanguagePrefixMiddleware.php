@@ -13,7 +13,6 @@ class LanguagePrefixMiddleware
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    
     public function handle($request, Closure $next)
     {
         $language = $request->segment(1);
@@ -21,7 +20,7 @@ class LanguagePrefixMiddleware
         if (in_array($language, config('app.locales'))) {
             app()->setLocale($language);
         } else {
-            return redirect('/lv');
+            return redirect('/en');
         }
 
         return $next($request);
