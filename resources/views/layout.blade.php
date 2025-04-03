@@ -17,7 +17,13 @@
     <!-- Header -->
     <header class="bg-white shadow">
         <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">Māris Suss</h1>
+            <a href="/" class="text-2xl font-bold hover:underline">Māris Suss</a>
+
+            <!-- Show only if authorised isAdmin()-->
+            @if(Auth::guard('admin')->check() && Auth::guard('admin')->user()->isAdmin())
+                <!-- Dashboard Link -->
+                <a href="{{ route('admin.dashboard', ['language' => app()->getLocale()]) }}" class="hover:underline">Dashboard</a>
+            @endif
 
             <!-- Language Switcher -->
             <div class="flex space-x-2">
@@ -43,6 +49,12 @@
     <main class="container mx-auto mt-8 px-4 flex-grow">
         @yield('content')
     </main>
+
+    @if(session('success'))
+    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" role="alert">
+        <span class="block sm:inline">{{ session('success') }}</span>
+    </div>
+    @endif
 
     <!-- Footer -->
     <footer class="bg-white shadow mt-8">
