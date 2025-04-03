@@ -23,12 +23,14 @@ class PostController extends Controller
     {
         // Validate the request data
         $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
+            'title_en' => 'required|string|max:255',
+            'content_en' => 'required|string',
+            'title_lv' => 'required|string|max:255',
+            'content_lv' => 'required|string',
         ]);
     
         // Create a new post using mass assignment
-        Post::create($request->only('title', 'content'));
+        Post::create($request->only('title_en', 'content_en', 'title_lv', 'content_lv'));
     
         // Redirect to the posts index page with a success message
         return redirect()->route('admin.posts.index', ['language' => $language])
@@ -44,12 +46,14 @@ class PostController extends Controller
     {
         // Validate the request data
         $request->validate([
-            'title' => 'required|string|max:255',
-            'content' => 'required|string',
+            'title_en' => 'required|string|max:255',
+            'content_en' => 'required|string',
+            'title_lv' => 'required|string|max:255',
+            'content_lv' => 'required|string',
         ]);
     
         // Update the post using mass assignment
-        $post->update($request->only('title', 'content'));
+        $post->update($request->only('title_en', 'content_en', 'title_lv', 'content_lv'));
     
         // Redirect to the posts index page with a success message
         return redirect()->route('admin.posts.index', ['language' => $language])
