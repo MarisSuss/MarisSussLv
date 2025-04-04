@@ -8,9 +8,26 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index($language)
+    public function index(string $language)
     {
         $posts = Post::all(); // Retrieve all posts
+        return view('admin.posts.index', compact('posts', 'language'));
+    }
+
+    public function show( string $language, Post $post)
+    {
+        return view('posts.show', compact('post', 'language'));
+    }
+
+    public function search( string $language, Request $request)
+    {
+        $query = $request->input('query');
+        $posts = Post::where('title_en', 'LIKE', "%{$query}%")
+                     ->orWhere('content_en', 'LIKE', "%{$query}%")
+                     ->orWhere('title_lv', 'LIKE', "%{$query}%")
+                     ->orWhere('content_lv', 'LIKE', "%{$query}%")
+                     ->get();
+
         return view('admin.posts.index', compact('posts', 'language'));
     }
 
@@ -19,7 +36,7 @@ class PostController extends Controller
         return view('admin.posts.create');
     }
 
-    public function store(Request $request, $language)
+    public function store( string $language, Request $request)
     {
         // Validate the request data
         $request->validate([
@@ -29,20 +46,22 @@ class PostController extends Controller
             'content_lv' => 'required|string',
         ]);
     
+   
+
         // Create a new post using mass assignment
         Post::create($request->only('title_en', 'content_en', 'title_lv', 'content_lv'));
-    
+
         // Redirect to the posts index page with a success message
         return redirect()->route('admin.posts.index', ['language' => $language])
                          ->with('success', 'Post created successfully!');
     }
 
-    public function edit($language, Post $post)
+    public function edit(Post $post, $language)
     {
         return view('admin.posts.edit', compact('post'));
     }
 
-    public function update(Request $request, $language, Post $post)
+    public function update(string $language, Post $post, Request $request)
     {
         // Validate the request data
         $request->validate([

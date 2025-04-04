@@ -19,11 +19,15 @@ Route::post('/{language}', LanguageController::class)->name('language');
 Route::group(['prefix' => '{language}'], function () {
 
     // Home page
-    Route::get('/', [HomeController::class, 'index'])->name('home');
+    Route::get('/', HomeController::class)->name('home');
 
     // Contact page
     Route::get('/contact', [ContactMeController::class, 'create'])->name('contact');
     Route::post('/contact', [ContactMeController::class, 'send']);
+
+    // Posts page
+    Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show');
+    Route::get('/posts/search', [PostController::class, 'search'])->name('posts.search');
 
     // Admin routes
     Route::get('/admin/login', [AdminController::class, 'showLoginForm'])->name('admin.login');
