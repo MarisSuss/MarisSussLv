@@ -15,9 +15,11 @@ class ContactMeController extends Controller
         return view('admin.messages', compact('messages'));
     }
 
-    public function create()
+    public function create($language)
     {
-        return view('contact');
+        return view('contact', [
+            'language' => $language,
+        ]);
     }
 
     public function send(Request $request)

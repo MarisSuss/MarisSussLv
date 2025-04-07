@@ -61,35 +61,47 @@ class PostSeeder extends Seeder
             </li>
         </ol>
     </div>
-
-    <!-- Showcase -->
-    <div class="p-4">
-        <h2 class="text-2xl font-bold mb-4">Showcase</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-                <h4 class="font-semibold mb-2">Failed Login then Register and Login with the new user</h4>
-                <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769635/crypto_01_fxlncl.gif" alt="Register and Login" class="rounded-lg shadow-md mx-auto">
-            </div>
-            <div>
-                <h4 class="font-semibold mb-2">Pick a coin from featured or find the one you want</h4>
-                <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769634/crypto_02_jo6tfw.gif" alt="Find crypto" class="rounded-lg shadow-md mx-auto">
-            </div>
-            <div>
-                <h4 class="font-semibold mb-2">Buy a coin</h4>
-                <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769634/crypto_03_aytmw7.gif" alt="Trade" class="rounded-lg shadow-md mx-auto">
-            </div>
-            <div>
-                <h4 class="font-semibold mb-2">Transfer crypto coins to other users</h4>
-                <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769633/crypto_04_cnba7f.gif" alt="Transfer" class="rounded-lg shadow-md mx-auto">
-            </div>
-            <div>
-                <h4 class="font-semibold mb-2">Elon Poor</h4>
-                <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769633/crypto__before_o0vvsr.png" alt="No Money" class="rounded-lg shadow-md mx-auto">
-            </div>
-            <div>
-                <h4 class="font-semibold mb-2">Elon Rich</h4>
-                <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769634/crypto_after_i0c7nr.png" alt="Much Money" class="rounded-lg shadow-md mx-auto">
-            </div>
+</div>
+            ',
+            'showcase_en' => '
+<div class="p-4">
+    <h2 class="text-2xl font-bold mb-4">Showcase</h2>
+        <div class="flex flex-col gap-4">
+        <div>
+            <h4 class="font-semibold mb-2">Failed Login then Register and Login with the new user</h4>
+            <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769635/crypto_01_fxlncl.gif" 
+                 alt="Register and Login" 
+                 class="rounded-lg shadow-md mx-auto w-full h-auto">
+        </div>
+        <div>
+            <h4 class="font-semibold mb-2">Pick a coin from featured or find the one you want</h4>
+            <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769634/crypto_02_jo6tfw.gif" 
+                 alt="Find crypto" 
+                 class="rounded-lg shadow-md mx-auto w-full h-auto">
+        </div>
+        <div>
+            <h4 class="font-semibold mb-2">Buy a coin</h4>
+            <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769634/crypto_03_aytmw7.gif" 
+                 alt="Trade" 
+                 class="rounded-lg shadow-md mx-auto w-full h-auto">
+        </div>
+        <div>
+            <h4 class="font-semibold mb-2">Transfer crypto coins to other users</h4>
+            <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769633/crypto_04_cnba7f.gif" 
+                 alt="Transfer" 
+                 class="rounded-lg shadow-md mx-auto w-full h-auto">
+        </div>
+        <div>
+            <h4 class="font-semibold mb-2">Elon Poor</h4>
+            <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769633/crypto__before_o0vvsr.png" 
+                 alt="No Money" 
+                 class="rounded-lg shadow-md mx-auto w-full h-auto">
+        </div>
+        <div>
+            <h4 class="font-semibold mb-2">Elon Rich</h4>
+            <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769634/crypto_after_i0c7nr.png" 
+                 alt="Much Money" 
+                 class="rounded-lg shadow-md mx-auto w-full h-auto">
         </div>
     </div>
 </div>
@@ -97,6 +109,7 @@ class PostSeeder extends Seeder
             'title_lv' => 'Tavs Kripto Draugs',
             'description_lv' => 'Kriptovalūtu tirdzniecības vietne ar portfeļa pārvaldību un darījumu vēsturi.',
             'content_lv' => 'In Progress',
+            'showcase_lv' => 'In Progress',
             'image_path' => 'https://res.cloudinary.com/de7wfzvii/image/upload/v1743769634/crypto_after_i0c7nr.png',
         ]);
     }

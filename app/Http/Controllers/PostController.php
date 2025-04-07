@@ -45,9 +45,11 @@ class PostController extends Controller
             'title_en' => 'required|string|max:255',
             'description_en' => 'required|string|max:255',
             'content_en' => 'required|string',
+            'showcase_en' => 'required|string',
             'title_lv' => 'required|string|max:255',
             'description_lv' => 'required|string|max:255',
             'content_lv' => 'required|string',
+            'showcase_lv' => 'required|string',
             'image_path' => 'string',
         ]);
 
@@ -56,9 +58,11 @@ class PostController extends Controller
             'title_en',
             'description_en',
             'content_en',
+            'showcase_en',
             'title_lv',
             'description_lv',
             'content_lv',
+            'showcase_lv',
             'image_path',
         ));
 
@@ -78,15 +82,27 @@ class PostController extends Controller
         $request->validate([
             'title_en' => 'required|string|max:255',
             'content_en' => 'required|string',
+            'showcase_en' => 'required|string',
             'description_en' => 'required|string|max:255',
             'title_lv' => 'required|string|max:255',
             'description_lv' => 'required|string|max:255',
             'content_lv' => 'required|string',
-            'image_path' => 'string',
+            'showcase_lv' => 'required|string',
+            'image_path' => 'nullable|string',
         ]);
     
         // Update the post using mass assignment
-        $post->update($request->only('title_en', 'content_en', 'title_lv', 'content_lv'));
+        $post->update($request->only(
+            'title_en',
+            'content_en',
+            'showcase_en',
+            'description_en',
+            'title_lv',
+            'content_lv',
+            'showcase_lv',
+            'description_lv',
+            'image_path'
+        ));
     
         // Redirect to the posts index page with a success message
         return redirect()->route('admin.posts.index', ['language' => $language])
