@@ -23,10 +23,12 @@ class PostController extends Controller
     {
         $query = $request->input('query');
         $posts = Post::where('title_en', 'LIKE', "%{$query}%")
-                     ->orWhere('content_en', 'LIKE', "%{$query}%")
-                     ->orWhere('title_lv', 'LIKE', "%{$query}%")
-                     ->orWhere('content_lv', 'LIKE', "%{$query}%")
-                     ->get();
+            ->orWhere('content_en', 'LIKE', "%{$query}%")
+            ->orWhere('title_lv', 'LIKE', "%{$query}%")
+            ->orWhere('content_lv', 'LIKE', "%{$query}%")
+            ->orWhere('description_en', 'LIKE', "%{$query}%")
+            ->orWhere('description_lv', 'LIKE', "%{$query}%")
+            ->get();
 
         return view('admin.posts.index', compact('posts', 'language'));
     }
@@ -41,22 +43,31 @@ class PostController extends Controller
         // Validate the request data
         $request->validate([
             'title_en' => 'required|string|max:255',
+            'description_en' => 'required|string|max:255',
             'content_en' => 'required|string',
             'title_lv' => 'required|string|max:255',
+            'description_lv' => 'required|string|max:255',
             'content_lv' => 'required|string',
+            'image_path' => 'string',
         ]);
-    
-   
 
         // Create a new post using mass assignment
-        Post::create($request->only('title_en', 'content_en', 'title_lv', 'content_lv'));
+        Post::create($request->only(
+            'title_en',
+            'description_en',
+            'content_en',
+            'title_lv',
+            'description_lv',
+            'content_lv',
+            'image_path',
+        ));
 
         // Redirect to the posts index page with a success message
         return redirect()->route('admin.posts.index', ['language' => $language])
                          ->with('success', 'Post created successfully!');
     }
 
-    public function edit(Post $post, $language)
+    public function edit(string $language, Post $post)
     {
         return view('admin.posts.edit', compact('post'));
     }
@@ -67,8 +78,11 @@ class PostController extends Controller
         $request->validate([
             'title_en' => 'required|string|max:255',
             'content_en' => 'required|string',
+            'description_en' => 'required|string|max:255',
             'title_lv' => 'required|string|max:255',
+            'description_lv' => 'required|string|max:255',
             'content_lv' => 'required|string',
+            'image_path' => 'string',
         ]);
     
         // Update the post using mass assignment

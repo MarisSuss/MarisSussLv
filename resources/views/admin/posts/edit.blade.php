@@ -6,18 +6,32 @@
     <form action="{{ route('admin.posts.update', ['language' => app()->getLocale(), 'post' => $post->id]) }}" method="POST">
         @csrf
         @method('POST')
+        <!-- Title En -->
         <div class="mb-4">
             <label for="title_en" class="block text-lg font-medium text-gray-700">Title (English)</label>
             <input type="text" name="title_en" id="title_en" value="{{ old('title_en', $post->title_en) }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
         </div>
+        <!-- Description En -->
+        <div class="mb-4">
+            <label for="description_en" class="block text-lg font-medium text-gray-700">Description (English)</label>
+            <textarea name="description_en" id="description_en" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>{{ old('description_en', $post->description_en) }}</textarea>
+        </div>
+        <!-- Content En -->
         <div class="mb-4">
             <label for="content_en" class="block text-lg font-medium text-gray-700">Content (English)</label>
             <textarea name="content_en" id="content_en" rows="5" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>{{ old('content_en', $post->content_en) }}</textarea>
         </div>
+        <!-- Title Lv -->
         <div class="mb-4">
             <label for="title_lv" class="block text-lg font-medium text-gray-700">Title (Latvian)</label>
             <input type="text" name="title_lv" id="title_lv" value="{{ old('title_lv', $post->title_lv) }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>
         </div>
+        <!-- Description Lv -->
+        <div class="mb-4">
+            <label for="description_lv" class="block text-lg font-medium text-gray-700">Description (Latvian)</label>
+            <textarea name="description_lv" id="description_lv" rows="3" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>{{ old('description_lv', $post->description_lv) }}</textarea>
+        </div>
+        <!-- Content Lv -->
         <div class="mb-4">
             <label for="content_lv" class="block text-lg font-medium text-gray-700">Content (Latvian)</label>
             <textarea name="content_lv" id="content_lv" rows="5" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm" required>{{ old('content_lv', $post->content_lv) }}</textarea>
