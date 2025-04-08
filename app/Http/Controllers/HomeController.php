@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function __invoke($language)
     {
-        echo "Hello World!"
+        echo "Hello World!";
         /*
         // gets all posts from the database
         $posts = Post::all();
