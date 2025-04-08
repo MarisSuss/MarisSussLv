@@ -7,12 +7,14 @@ use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
-    public function showLoginForm()
+    public function showLoginForm($language)
     {
-        return view('admin.login');
+        return view('admin.login',[
+            'language' => $language
+        ]);
     }
 
-    public function login(Request $request, $language)
+    public function login(Request $request, string $language)
     {
         $credentials = $request->only('email', 'password');
 
@@ -25,14 +27,14 @@ class AdminController extends Controller
         ]);
     }
 
-    public function logout($language)
+    public function logout(string $language)
     {
         Auth::guard('admin')->logout();
 
         return redirect()->route('admin.login', ['language' => $language]);
     }
 
-    public function dashboard($language)
+    public function dashboard(string $language)
     {
         return view('admin.dashboard', [
             'language' => $language
