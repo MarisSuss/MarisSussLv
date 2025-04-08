@@ -18,13 +18,6 @@ Route::post('/{language}', LanguageController::class)->name('language');
 // Group all routes and give them a prefix of the first segment as $language
 Route::group(['prefix' => '{language}'], function () {
 
-    // Temporary route to run migrations
-    // This should be removed in production
-    Route::get('/run-migrations', function () {
-        \Artisan::call('migrate', ['--force' => true]);
-        return '✅ Migrations ran successfully!';
-    });
-
     // Home page
     Route::get('/', HomeController::class)->name('home');
 
