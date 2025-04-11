@@ -9,7 +9,6 @@ class HomeController extends Controller
 {
     public function __invoke($language)
     {
-        // gets all posts from the database
         $posts = Post::all();
 
         return view('home', [
