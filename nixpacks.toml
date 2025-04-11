@@ -1,8 +1,2 @@
-[phases.setup]
-nixPkgs = ["php", "composer", "git"]
-
-[phases.build]
-cmds = ["composer install", "php artisan config:cache"]
-
 [start]
 cmd = "php artisan serve --host=0.0.0.0 --port=${PORT}"
