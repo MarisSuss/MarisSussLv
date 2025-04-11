@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["php", "composer"]
+nixPkgs = ["php", "composer", "git"]
 
 [phases.build]
 cmds = ["composer install", "php artisan config:cache"]
