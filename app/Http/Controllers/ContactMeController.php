@@ -9,10 +9,13 @@ use App\Models\Message;
 
 class ContactMeController extends Controller
 {
-    public function index()
+    public function index($language)
     {
         $messages = Message::all();
-        return view('admin.messages', compact('messages'));
+        return view('contact', [
+            'language' => $language,
+            'messages' => $messages,
+        ]);
     }
 
     public function create($language)
