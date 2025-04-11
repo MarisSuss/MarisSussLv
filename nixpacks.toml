@@ -1,6 +1,5 @@
 [phases.setup]
-nixPkgs = ["php", "git"]
-cmds = ["curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer"]
+nixPkgs = ["php", "composer", "git"]
 
 [phases.build]
 cmds = ["composer install", "php artisan config:cache"]
