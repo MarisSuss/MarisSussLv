@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Message;
 
 class AdminController extends Controller
 {
@@ -38,6 +39,24 @@ class AdminController extends Controller
     {
         return view('admin.dashboard', [
             'language' => $language
+        ]);
+    }
+
+    public function messages(string $language)
+    {
+        $messages = Message::all();
+
+        return view('admin.messages', [
+            'language' => $language,
+            'messages' => $messages
+        ]);
+    }
+
+    public function showMessage(string $language, Message $message)
+    {
+        return view('admin.showMessage', [
+            'language' => $language,
+            'message' => $message
         ]);
     }
 }

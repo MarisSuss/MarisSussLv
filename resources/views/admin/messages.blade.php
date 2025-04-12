@@ -10,6 +10,7 @@
                 <th class="border border-gray-300 px-4 py-2 text-left">Email</th>
                 <th class="border border-gray-300 px-4 py-2 text-left">Message</th>
                 <th class="border border-gray-300 px-4 py-2 text-left">Date</th>
+                <th class="border border-gray-300 px-4 py-2 text-left">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -17,8 +18,11 @@
                 <tr>
                     <td class="border border-gray-300 px-4 py-2">{{ $message->name }}</td>
                     <td class="border border-gray-300 px-4 py-2">{{ $message->email }}</td>
-                    <td class="border border-gray-300 px-4 py-2">{{ $message->message }}</td>
+                    <td class="border border-gray-300 px-4 py-2">{{ Str::limit($message->message, 50) }}</td>
                     <td class="border border-gray-300 px-4 py-2">{{ $message->created_at->format('Y-m-d H:i') }}</td>
+                    <td class="border border-gray-300 px-4 py-2">
+                        <a href="{{ route('admin.messages.show', ['language' => $language, 'message' => $message->id]) }}" class="text-indigo-600 hover:underline">View</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

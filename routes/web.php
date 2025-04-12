@@ -39,7 +39,8 @@ Route::group(['prefix' => '{language}'], function () {
         Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
     
         // messages management
-        Route::get('/admin/messages', [ContactMeController::class, 'index'])->name('admin.messages.index');
+        Route::get('/admin/messages', [AdminController::class, 'messages'])->name('admin.messages');
+        Route::get('/admin/messages/{message}', [AdminController::class, 'showMessage'])->name('admin.messages.show');
 
         // Posts management
         Route::get('/admin/posts', [PostController::class, 'index'])->name('admin.posts.index');       
