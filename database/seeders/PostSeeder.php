@@ -91,18 +91,6 @@ class PostSeeder extends Seeder
                  alt="Transfer" 
                  class="rounded-lg shadow-md mx-auto w-full h-auto">
         </div>
-        <div>
-            <h4 class="font-semibold mb-2">Elon Poor</h4>
-            <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769633/crypto__before_o0vvsr.png" 
-                 alt="No Money" 
-                 class="rounded-lg shadow-md mx-auto w-full h-auto">
-        </div>
-        <div>
-            <h4 class="font-semibold mb-2">Elon Rich</h4>
-            <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769634/crypto_after_i0c7nr.png" 
-                 alt="Much Money" 
-                 class="rounded-lg shadow-md mx-auto w-full h-auto">
-        </div>
     </div>
 </div>
             ',

@@ -10,9 +10,15 @@
             {{ $language === 'en' ? $post->title_en : $post->title_lv }}
         </h1>
 
-        <!-- Time -->
+        <!-- Dates -->
         <div class="text-gray-500 text-right mb-6">
-            {{ \Carbon\Carbon::parse($post->created_at)->format('d.m.Y') }}
+            <!-- Created At -->
+            Created: {{ \Carbon\Carbon::parse($post->created_at)->format('d.m.Y') }}
+
+            <!-- Updated At (if different from Created At) -->
+            @if ($post->updated_at && $post->updated_at != $post->created_at)
+                <br>Last updated: {{ \Carbon\Carbon::parse($post->updated_at)->format('d.m.Y') }}
+            @endif
         </div>
 
         <!-- Description -->

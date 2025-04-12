@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->text('content_lv');
             $table->text('showcase_en');
             $table->text('showcase_lv');
-            $table->string('image_path')->nullable(); // Optional image path
+            $table->string('image_path')->nullable();
             $table->timestamps();
         });
     }
