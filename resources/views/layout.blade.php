@@ -14,37 +14,72 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
     <style>
         body, header, footer {
-            background: linear-gradient(135deg, rgba(30, 30, 30, 1), rgba(45, 45, 45, 1));
-            color: #d1d5db; /* Light gray text */
+            background: #1a1a1a; /* Darker background */
+            color: #e5e7eb; /* Light gray text */
+        }
+        a {
+            color: #60a5fa; /* Light blue links */
+        }
+        a:hover {
+            color: #3b82f6; /* Brighter blue on hover */
         }
     </style>
 </head>
 
-<body class="bg-gray-900 text-gray-300 font-roboto flex flex-col min-h-screen">
+<body class="font-roboto flex flex-col min-h-screen">
     <!-- Header -->
     <header class="sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo and Language Switcher -->
-            <div class="flex items-center space-x-4">
-                <a href="/" class="text-4xl font-bold text-gray-100">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center" style="box-shadow: 0 10px 8px -8px rgba(255, 0, 0, 0.8);">
+        <div class="flex items-center space-x-4">
+                <!-- Logo -->
+                <a href="{{ url('/' . $language) }}" class="text-4xl font-bold text-gray-100">
                     Māris Suss
                 </a>
-                <form action="{{ url('/lv') }}" method="POST">
-                    @csrf
-                    <button type="submit" class="hover:underline">LV</button>
-                </form>
-                <p>/</p>
-                <form action="{{ url('/en') }}" method="POST">
-                    @csrf
-                    <button type="submit" class="hover:underline">EN</button>
-                </form>
+                <p class="text-4xl font-bold text-gray-100">
+                    /
+                </p>
+
+                <!-- Language Switcher -->     
+                <div class="flex items-center space-x-4">
+                    <form action="{{ url('/lv') }}" method="POST">
+                        @csrf
+                        <button type="submit" 
+                                class="text-2xl font-bold transition-all duration-300 
+                                    {{ $language === 'lv' ? 'text-green-400 glow-green' : 'text-gray-400 hover:text-green-400 hover:glow-green' }}">
+                            LV
+                        </button>
+                    </form>
+                    <form action="{{ url('/en') }}" method="POST">
+                        @csrf
+                        <button type="submit" 
+                                class="text-2xl font-bold transition-all duration-300 
+                                    {{ $language === 'en' ? 'text-green-400 glow-green' : 'text-gray-400 hover:text-green-400 hover:glow-green' }}">
+                            EN
+                        </button>
+                    </form>
+                </div>
+
+                <style>
+                    .glow-green {
+                        text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+                    }
+                    .hover\:glow-green:hover {
+                        text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+                    }
+                    .hover\:glow-red:hover {
+                        text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+                    }
+                </style>
             </div>
 
-            <!-- Navigation -->
             <nav class="hidden md:flex space-x-12">
-                <a href="{{ url($language . '/contact') }}" class="px-4 py-2 bg-indigo-600 text-white rounded-lg shadow-md hover:bg-indigo-700 transition">
-                    Contact
-                </a>
+                <!-- Contact button -->
+            <a href="{{ url($language . '/contact') }}" 
+            class="px-4 py-2 bg-gray-800 text-white rounded-lg shadow-md transition-all duration-300 
+                    hover:bg-green-500 hover:shadow-green-500/50">
+                Contact
+            </a>
+                <!-- Admin Dashboard -->
                 @if(Auth::guard('admin')->check() && Auth::guard('admin')->user()->isAdmin())
                     <a href="{{ route('admin.dashboard', ['language' => $language]) }}" class="hover:text-indigo-400">Dashboard</a>
                 @endif
@@ -91,7 +126,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-400 py-6 mt-8">
+    <footer class="text-white py-6 mt-8">
         <div class="container mx-auto text-center">
             <p>&copy; {{ date('Y') }} Māris Suss. All rights reserved.</p>
         </div>
