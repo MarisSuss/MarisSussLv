@@ -10,7 +10,7 @@ class AdminController extends Controller
 {
     public function showLoginForm($language)
     {
-        return view('admin.login',[
+        return view('admin.login', [
             'language' => $language
         ]);
     }

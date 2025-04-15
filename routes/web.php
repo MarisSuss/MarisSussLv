@@ -37,13 +37,13 @@ Route::group(['prefix' => '{language}'], function () {
         // Admin dashboard
         Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
         Route::get('/admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
-    
+
         // messages management
         Route::get('/admin/messages', [AdminController::class, 'messages'])->name('admin.messages');
         Route::get('/admin/messages/{message}', [AdminController::class, 'showMessage'])->name('admin.messages.show');
 
         // Posts management
-        Route::get('/admin/posts', [PostController::class, 'index'])->name('admin.posts.index');       
+        Route::get('/admin/posts', [PostController::class, 'index'])->name('admin.posts.index');
         Route::get('/admin/posts/create', [PostController::class, 'create'])->name('admin.posts.create');
         Route::post('/admin/posts/create', [PostController::class, 'store'])->name('admin.posts.store');
         Route::get('/admin/posts/{post}/edit', [PostController::class, 'edit'])->name('admin.posts.edit');

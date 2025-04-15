@@ -2,6 +2,6 @@
 
 return [
 
-    'greeting' => 'Sveiki!',
+    'projects' => 'Mani Projekti!',
 
 ];

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
-
 class PostController extends Controller
 {
     public function index(string $language)
@@ -14,12 +13,12 @@ class PostController extends Controller
         return view('admin.posts.index', compact('posts', 'language'));
     }
 
-    public function show( string $language, Post $post)
+    public function show(string $language, Post $post)
     {
         return view('posts.show', compact('post', 'language'));
     }
 
-    public function search( string $language, Request $request)
+    public function search(string $language, Request $request)
     {
         $query = $request->input('query');
         $posts = Post::where('title_en', 'LIKE', "%{$query}%")
@@ -38,7 +37,7 @@ class PostController extends Controller
         return view('admin.posts.create', compact('language'));
     }
 
-    public function store( string $language, Request $request)
+    public function store(string $language, Request $request)
     {
         // Validate the request data
         $request->validate([
@@ -52,7 +51,7 @@ class PostController extends Controller
             'showcase_lv' => 'required|string',
             'image_path' => 'nullable|string', // Ensure image_path is nullable and a string
         ]);
-    
+
         // Create a new post using mass assignment
         Post::create($request->only(
             'title_en',
@@ -65,7 +64,7 @@ class PostController extends Controller
             'showcase_lv',
             'image_path'
         ));
-    
+
         // Redirect to the posts index page with a success message
         return redirect()->route('admin.posts.index', ['language' => $language])
                          ->with('success', 'Post created successfully!');
@@ -73,7 +72,8 @@ class PostController extends Controller
 
     public function edit(string $language, Post $post)
     {
-        return view('admin.posts.edit',
+        return view(
+            'admin.posts.edit',
             [
                 'post' => $post,
                 'language' => $language,
@@ -93,9 +93,9 @@ class PostController extends Controller
             'description_lv' => 'required|string|max:255',
             'content_lv' => 'required|string',
             'showcase_lv' => 'required|string',
-            'image_path' => 'nullable|string', 
+            'image_path' => 'nullable|string',
         ]);
-    
+
         // Update the post using mass assignment
         $post->update($request->only(
             'title_en',
@@ -108,7 +108,7 @@ class PostController extends Controller
             'showcase_lv',
             'image_path'
         ));
-    
+
         // Redirect to the posts index page with a success message
         return redirect()->route('admin.posts.index', ['language' => $language])
                          ->with('success', 'Post updated successfully!');
