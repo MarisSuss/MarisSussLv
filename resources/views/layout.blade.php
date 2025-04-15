@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <!-- Alpine.js -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/de7wfzvii/image/upload/v1744719684/favicon_marissusslv_v9lp1e.png">
     <style>
         body,
         header,
@@ -36,9 +37,8 @@
 
 <body class="font-roboto flex flex-col min-h-screen">
     <!-- Header -->
-    <header class="sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-baseline"
-            style="box-shadow: 0 10px 8px -8px rgba(255, 0, 0, 0.8);">
+    <header class="sticky top-0 z-50" style="box-shadow: 0 10px 8px -8px rgba(255, 0, 0, 0.8);">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-baseline">
             <!-- Left Section: Logo and Language Switcher -->
             <div class="flex items-baseline space-x-4">
                 <!-- Logo -->
@@ -78,52 +78,17 @@
                 </a>
             </div>
         </div>
-
-        <style>
-            a:hover {
-                color: inherit;
-                /* Prevent default blue hover */
-            }
-
-            .hover\:glow-red:hover {
-                text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-            }
-        </style>
     </header>
 
-    <style>
-        .hover\:glow-white:hover {
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-        }
-
-        .hover\:glow-red:hover {
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-        }
-    </style>
-
     <!-- Main Content -->
-    <main class="container mx-auto mt-8 px-4 flex-grow">
-        <div>
-            @if (session('success'))
-                <div class="bg-green-500 text-white p-4 rounded-lg mb-4">
-                    {{ session('success') }}
-                </div>
-            @endif
-            @if (session('error'))
-                <div class="bg-red-500 text-white p-4 rounded-lg mb-4">
-                    {{ session('error') }}
-                </div>
-            @endif
-        </div>
-
+    <main class="container mx-auto flex-grow" style="margin-top: 0; padding-top: 0; margin-bottom: 0;">
         <div>
             @yield('content')
         </div>
-
     </main>
 
     <!-- Footer -->
-    <footer class="text-white py-6 mt-8">
+    <footer class="text-white py-6" style="margin-top: 0; box-shadow: 0 -10px 8px -8px rgba(255, 0, 0, 0.8);">
         <div class="container mx-auto text-center">
             <p>&copy; {{ date('Y') }} Māris Suss. All rights reserved.</p>
         </div>
