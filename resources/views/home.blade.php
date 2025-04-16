@@ -1,7 +1,8 @@
 @extends('layout')
 
 @section('content')
-    <div class="rounded-lg" style="box-shadow: 10px 0 10px -8px rgba(255, 0, 0, 0.5), -10px 0 10px -8px rgba(255, 0, 0, 0.5); margin-top: 0;">
+    <div class="rounded-lg"
+        style="box-shadow: 10px 0 10px -8px rgba(255, 0, 0, 0.5), -10px 0 10px -8px rgba(255, 0, 0, 0.5); margin-top: 0;">
         <!-- Success/Error Message Section -->
         <div>
             @if (session('success'))
@@ -15,35 +16,36 @@
                 </div>
             @endif
         </div>
-        
-        <!-- Profile Section -->
-        <div class="flex flex-col lg:flex-row items-stretch mb-6 p-8" style="box-shadow: 0 10px 8px -8px rgba(255, 0, 0, 0.8);">
-            <!-- Left Section: Profile Content -->
 
+        <!-- Profile Section -->
+        <div class="flex flex-col lg:flex-row items-stretch mb-6" style="box-shadow: 0 10px 8px -8px rgba(255, 0, 0, 0.8);">
+
+            <!-- Left Section: Profile Content -->
             <div class="lg:w-3/5 w-full">
-                <div style="box-shadow: 0 10px 8px -8px rgba(255, 0, 0, 0.8);">
+                <div class="p-4" style="box-shadow: 0 10px 8px -8px rgba(255, 0, 0, 0.8);">
                     <h2 class="text-5xl font-bold text-red-500 mb-3" style="text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);">
                         {{ __('home.i_am') }}
                     </h2>
-                    <p class="text-xl mb-4" style="margin-right: 5px;">
+                    <p class="text-xl mb-4">
                         {{ __('home.intro') }}
                     </p>
-                    <p class="text-xl mb-4" style="margin-right: 5px;">
+                    <p class="text-xl mb-4">
                         {{ __('home.clean_code') }}
                     </p>
                 </div>
                 <!-- Soft skill Section -->
                 <div class="mb-4">
-                    <div style="box-shadow: 0 10px 8px -8px rgba(255, 0, 0, 0.8);">
-                        <h4 class="text-2xl font-bold text-red-500 mb-2" style="text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);">
+                    <div class="p-4" style="box-shadow: 0 10px 8px -8px rgba(255, 0, 0, 0.8);">
+                        <h4 class="text-2xl font-bold text-red-500 mb-2"
+                            style="text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);">
                             {{ __('home.hard_worker') }}
                         </h4>
                         <p class="text-xl">
                             {{ __('home.hard_worker_desc') }}
-                        </p>                        
+                        </p>
                     </div>
                 </div>
-                <div>
+                <div class="p-4">
                     <h4 class="text-2xl font-bold text-red-500 mb-2" style="text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);">
                         {{ __('home.teamworker') }}
                     </h4>
@@ -54,11 +56,11 @@
             </div>
 
             <!-- Right Section: Profile Image -->
-            <div class="lg:w-2/5 w-full flex justify-center items-center" style="padding: 0; margin: 0;">
-                <img src="https://res.cloudinary.com/de7wfzvii/image/upload/q_auto:best,f_auto,w_600,h_600,c_fill,g_auto/test_k5upmt.jpg"
-                    alt="Missing Profile Image"
-                    class="rounded-lg shadow-lg object-cover"
-                    style="width: 100%; height: 600px; margin: 0; display: block;">
+            <div class="lg:w-2/5 w-full flex justify-center items-center"
+                style="padding: 0; margin: 0; box-shadow: -10px 0 10px -8px rgba(255, 0, 0, 0.8);">
+                <img src="https://res.cloudinary.com/de7wfzvii/image/upload/q_auto:best,f_auto,w_650,h_650,c_fill,g_auto/test_k5upmt.jpg"
+                    alt="Missing Profile Image" class="rounded-lg shadow-lg object-cover"
+                    style="width: 100%; height: 650px; margin: 0; display: block;">
             </div>
         </div>
 
