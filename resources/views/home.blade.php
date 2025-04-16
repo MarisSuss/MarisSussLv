@@ -5,12 +5,12 @@
         <!-- Success/Error Message Section -->
         <div>
             @if (session('success'))
-                <div id="success-message" class="bg-green-500 text-white p-4 rounded-lg mb-4">
+                <div id="success-message" class="bg-green-500 text-white p-4 rounded-lg">
                     {{ session('success') }}
                 </div>
             @endif
             @if (session('error'))
-                <div id="error-message" class="bg-red-500 text-white p-4 rounded-lg mb-4">
+                <div id="error-message" class="bg-red-500 text-white p-4 rounded-lg">
                     {{ session('error') }}
                 </div>
             @endif

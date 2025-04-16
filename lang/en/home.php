@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'projects' => 'My Projects!',
+    'projects' => 'My Projects',
     'i_am' => 'I am',
     'intro' => 'Māris Suss, a full-stack developer with a focus on the backend. I live and breathe <strong>PHP</strong> with <strong>MySQL</strong> for data storage. I have experience with various technologies and frameworks, including <strong>Laravel</strong>, <strong>Vue.js</strong>, and <strong>Tailwind CSS</strong>.',
     'clean_code' => 'I am focused on clean code and being mindful of the future so that my code works great and as time goes on keeps its value. In other words, I am great to work with as I strongly believe that teamwork and mutual respect are the keys to the success of any great project.',

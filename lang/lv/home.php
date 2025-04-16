@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'projects' => 'Mani Projekti!',
+    'projects' => 'Mani Projekti',
     'i_am' => 'Es esmu',
     'intro' => 'Māris Suss, full stack izstrādātājs ar fokusu uz backend. Es dzīvoju un elpoju <strong>PHP</strong> ar <strong>MySQL</strong> datu glabāšanai. Man ir pieredze ar dažādām tehnoloģijām un ietvariem, tostarp <strong>Laravel</strong>, <strong>Vue.js</strong> un <strong>Tailwind CSS</strong>.',
     'clean_code' => 'Es koncentrējos uz tīru kodu un domāju par nākotni, lai mans kods darbotos lieliski un laika gaitā saglabātu savu vērtību. Citiem vārdiem sakot, es esmu lielisks komandas biedrs, jo stingri uzskatu, ka komandas darbs un savstarpēja cieņa ir jebkura lieliska projekta panākumu atslēga.',
