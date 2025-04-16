@@ -1,6 +1,6 @@
 # Māris Suss Portfolio Website
 
-Welcome to the repository for **marissuss.lv**, my personal portfolio website! This project showcases my skills, projects, and experience as a full-stack developer with a focus on backend development. The website is built with a modern tech stack and includes features like project showcases, a contact form, and an admin panel for managing content.
+This project showcases my skills, projects, and experience as a full-stack developer with a focus on backend development. The website is built with a modern tech stack and includes features like project showcases, a contact form, and an admin panel for managing content.
 
 ---
 
