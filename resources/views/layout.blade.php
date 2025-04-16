@@ -74,7 +74,7 @@
             <div>
                 <a href="{{ url($language . '/contact') }}"
                     class="text-3xl font-bold text-white transition-all duration-300 hover:text-red-500 hover:glow-red">
-                    Contact Me
+                    {{ __('layout.contact_me') }}
                 </a>
             </div>
         </div>

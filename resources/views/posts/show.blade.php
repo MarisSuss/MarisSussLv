@@ -1,17 +1,17 @@
 @extends('layout')
 
 @section('content')
-<div class="flex flex-wrap lg:flex-nowrap gap-4 mt-8 px-4 lg:px-0">
+<div class="flex flex-wrap lg:flex-nowrap gap-4">
 
     <!-- Post Section -->
-    <div class="bg-white p-6 rounded-lg shadow-lg lg:w-1/2">
+    <div class="bg-white shadow-lg lg:w-1/2">
         <!-- Title -->
-        <h1 class="text-3xl font-bold text-center mb-6">
+        <h1 class="text-3xl font-bold text-center">
             {{ $language === 'en' ? $post->title_en : $post->title_lv }}
         </h1>
 
         <!-- Dates -->
-        <div class="text-gray-500 text-right mb-6">
+        <div class="text-gray-500 text-right">
             <!-- Created At -->
             Created: {{ \Carbon\Carbon::parse($post->created_at)->format('d.m.Y') }}
 
@@ -22,7 +22,7 @@
         </div>
 
         <!-- Description -->
-        <div class="text-gray-600 text-center mb-6">
+        <div class="text-gray-600 text-center">
             {{ $language === 'en' ? $post->description_en : $post->description_lv }}
         </div>
 
@@ -33,7 +33,7 @@
     </div>
 
     <!-- Showcase Section -->
-    <div class="bg-white p-6 rounded-lg shadow-lg lg:w-1/2">
+    <div class="bg-white shadow-lg lg:w-1/2">
         <div class="text-gray-600 overflow-hidden">
             {!! $language === 'en' ? $post->showcase_en : $post->showcase_lv !!}
         </div>
