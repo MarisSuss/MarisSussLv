@@ -68,13 +68,13 @@ Follow these steps to set up the project locally:
 
 ## 📸 **Showcase**
 
-### 1. **Homepage**
-![Homepage](https://res.cloudinary.com/de7wfzvii/image/upload/v1744797842/342a967e-200e-4db3-b12d-f58c730cfa86.png)
+### 1. **Home**
+![Home](https://res.cloudinary.com/de7wfzvii/image/upload/v1744797842/342a967e-200e-4db3-b12d-f58c730cfa86.png)
 
-### 2. **Project**
+### 2. **View a Project**
 ![Project](https://res.cloudinary.com/de7wfzvii/image/upload/v1744797892/6341cc1a-07cf-46bd-8820-6e73ee2672a1.png)
 
-### 3. **Contact**
+### 3. **Sen Message**
 ![Contact](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798044/177f2615-6508-4863-a926-37d6d6d083de.png)
 
 ### 3. **Admin Panel**
