@@ -58,7 +58,7 @@ Follow these steps to set up the project locally:
    ```bash
    php artisan migrate
    ```
-
+ 
 5. **Serve the Application**:
    ```bash
    php artisan serve
