@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'get_in_touch' => 'Get in Touch',
+    'get_in_touch' => 'Contact Me',
     'contact_details' => 'Feel free to reach out to me using the contact details below or the form on the right.',
     'email' => 'Email',
     'phone' => 'Phone',

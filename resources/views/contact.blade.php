@@ -26,19 +26,19 @@
                     <label for="name" class="block text-lg font-bold text-red-500 mb-2" style="text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);">
                         {{ __('contact.name') }}
                     </label>
-                    <input type="text" id="name" name="name" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm" placeholder="{{ __('contact.name_placeholder') }}" required>
+                    <input type="text" id="name" name="name" value="{{ old('name') }}" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm text-black" placeholder="{{ __('contact.name_placeholder') }}" required>
                 </div>
                 <div>
                     <label for="email" class="block text-lg font-bold text-red-500 mb-2" style="text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);">
                         {{ __('contact.email') }}
                     </label>
-                    <input type="email" id="email" name="email" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm" placeholder="{{ __('contact.email_placeholder') }}" required>
+                    <input type="email" id="email" name="email" value="{{ old('email') }}" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm text-black" placeholder="{{ __('contact.email_placeholder') }}" required>
                 </div>
                 <div>
                     <label for="message" class="block text-lg font-bold text-red-500 mb-2" style="text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);">
                         {{ __('contact.message') }}
                     </label>
-                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm" placeholder="{{ __('contact.message_placeholder') }}" required></textarea>
+                    <textarea id="message" name="message" rows="4" class="mt-1 block w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 sm:text-sm text-black" placeholder="{{ __('contact.message_placeholder') }}" required>{{ old('message') }}</textarea>
                 </div>
                 <div class="text-center">
                     <button type="submit" class="inline-flex items-center px-6 py-3 border border-transparent text-lg font-bold rounded-md shadow-sm text-white bg-red-500 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">

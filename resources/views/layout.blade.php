@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <!-- Alpine.js -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
-    <link rel="icon" type="image/png" href="https://res.cloudinary.com/de7wfzvii/image/upload/v1744719684/favicon_marissusslv_v9lp1e.png">
+    <link rel="icon" type="image/png"
+        href="https://res.cloudinary.com/de7wfzvii/image/upload/v1744719684/favicon_marissusslv_v9lp1e.png">
     <style>
         body,
         header,
@@ -70,12 +71,18 @@
                 </div>
             </div>
 
-            <!-- Right Section: Contact Me -->
-            <div>
+            <!-- Right Section: Contact Me and Admin/Dashboard -->
+            <div class="flex items-center space-x-4">
                 <a href="{{ url($language . '/contact') }}"
                     class="text-3xl font-bold text-white transition-all duration-300 hover:text-red-500 hover:glow-red">
                     {{ __('layout.contact_me') }}
                 </a>
+                @if (auth('admin')->check())
+                    <a href="{{ url($language . '/admin/dashboard') }}"
+                        class="text-3xl font-bold text-white transition-all duration-300 hover:text-red-500 hover:glow-red">
+                        [Dashboard]
+                    </a>
+                @endif
             </div>
         </div>
     </header>

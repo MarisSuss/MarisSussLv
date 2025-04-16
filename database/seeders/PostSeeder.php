@@ -14,7 +14,7 @@ class PostSeeder extends Seeder
     {
         Post::create([
             'title_en' => 'Your Crypto Bro',
-            'description_en' => 'A cryptocurrency trading website with portfolio management and transaction history. A cryptocurrency trading website with portfolio management and transaction history.',
+            'description_en' => 'A cryptocurrency trading website with portfolio management and transaction history.',
             'content_en' => '
 <div class="mx-auto">
     <!-- General Info and Technologies -->
@@ -49,15 +49,15 @@ class PostSeeder extends Seeder
         <h2 class="text-2xl font-bold mb-4">Setup</h2>
         <ol class="list-decimal list-inside">
             <li class="mb-4">Clone this repository using the following command:
-                <div class="bg-gray-100 p-2 rounded mt-2"><code>git clone https://github.com/MarisSuss/your-crypto-bro</code></div>
+                <div class="bg-gray-100 p-2 rounded mt-2"><code style="color: black;">git clone <span style="color: black;">https://github.com/MarisSuss/your-crypto-bro</span></code></div>
             </li>
             <li class="mb-4">Install all the dependencies using the following command:
-                <div class="bg-gray-100 p-2 rounded mt-2"><code>composer install</code></div>
+                <div class="bg-gray-100 p-2 rounded mt-2"><code style="color: black;">composer install</code></div>
             </li>
-            <li class="mb-4">Create a database and import the <code>your-crypto-bro.sql</code> file.</li>
-            <li class="mb-4">Rename the <code>.env.example</code> file to <code>.env</code> and fill in the required fields.</li>
+            <li class="mb-4">Create a database and import the <code style="color: white; font-weight: bold;">your-crypto-bro.sql</code> file.</li>
+            <li class="mb-4">Rename the <code style="color: white; font-weight: bold;">.env.example</code> file to <code style="color: white; font-weight: bold;">.env</code> and fill in the required fields.</li>
             <li class="mb-4">Run the following command:
-                <div class="bg-gray-100 p-2 rounded mt-2"><code>php -S localhost:8000 -t public</code></div>
+                <div class="bg-gray-100 p-2 rounded mt-2"><code style="color: black;">php -S localhost:8000 -t public</code></div>
             </li>
         </ol>
     </div>
@@ -66,7 +66,7 @@ class PostSeeder extends Seeder
             'showcase_en' => '
 <div class="p-4">
     <h2 class="text-2xl font-bold mb-4">Showcase</h2>
-        <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4">
         <div>
             <h4 class="font-semibold mb-2">Failed Login then Register and Login with the new user</h4>
             <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769635/crypto_01_fxlncl.gif" 
@@ -95,7 +95,7 @@ class PostSeeder extends Seeder
 </div>
             ',
             'title_lv' => 'Tavs Kripto Draugs',
-            'description_lv' => 'Kriptovalūtu tirdzniecības vietne ar portfeļa pārvaldību un darījumu vēsturi. Kriptovalūtu tirdzniecības vietne ar portfeļa pārvaldību un darījumu vēsturi.',
+            'description_lv' => 'Kriptovalūtu tirdzniecības vietne ar portfeļa pārvaldību un darījumu vēsturi.',
             'content_lv' => '
 <div class="mx-auto">
     <div class="grid grid-cols-1 lg:grid-cols-4">
@@ -126,15 +126,15 @@ class PostSeeder extends Seeder
         <h2 class="text-2xl font-bold mb-4">Uzstādīšana</h2>
         <ol class="list-decimal list-inside">
             <li class="mb-4">Klonējiet šo repozitoriju, izmantojot šādu komandu:
-                <div class="bg-gray-100 p-2 rounded mt-2"><code>git clone https://github.com/MarisSuss/your-crypto-bro</code></div>
+                <div class="bg-gray-100 p-2 rounded mt-2"><code style="color: black;">git clone <span style="color: black;">https://github.com/MarisSuss/your-crypto-bro</span></code></div>
             </li>
             <li class="mb-4">Instalējiet visas atkarības, izmantojot šādu komandu:
-                <div class="bg-gray-100 p-2 rounded mt-2"><code>composer install</code></div>
+                <div class="bg-gray-100 p-2 rounded mt-2"><code style="color: black;">composer install</code></div>
             </li>
-            <li class="mb-4">Izveidojiet datubāzi un importējiet <code>your-crypto-bro.sql</code> failu.</li>
-            <li class="mb-4">Pārdēvējiet <code>.env.example</code> failu uz <code>.env</code> un aizpildiet nepieciešamos laukus.</li>
+            <li class="mb-4">Izveidojiet datubāzi un importējiet <code style="color: white; font-weight: bold;">your-crypto-bro.sql</code> failu.</li>
+            <li class="mb-4">Pārdēvējiet <code style="color: white; font-weight: bold;">.env.example</code> failu uz <code style="color: white; font-weight: bold;">.env</code> un aizpildiet nepieciešamos laukus.</li>
             <li class="mb-4">Palaidiet šādu komandu:
-                <div class="bg-gray-100 p-2 rounded mt-2"><code>php -S localhost:8000 -t public</code></div>
+                <div class="bg-gray-100 p-2 rounded mt-2"><code style="color: black;">php -S localhost:8000 -t public</code></div>
             </li>
         </ol>
     </div>
@@ -143,7 +143,7 @@ class PostSeeder extends Seeder
             'showcase_lv' => '
 <div class="p-4">
     <h2 class="text-2xl font-bold mb-4">Demonstrācija</h2>
-        <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-4">
         <div>
             <h4 class="font-semibold mb-2">Neizdevies pieteikšanās mēģinājums, reģistrācija un pieteikšanās ar jaunu lietotāju</h4>
             <img src="https://res.cloudinary.com/de7wfzvii/image/upload/v1743769635/crypto_01_fxlncl.gif" 
