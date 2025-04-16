@@ -8,7 +8,7 @@
 
     <form action="{{ route('admin.posts.update', ['language' => app()->getLocale(), 'post' => $post->id]) }}" method="POST" enctype="multipart/form-data" class="bg-gray-800 p-6 rounded-lg shadow-lg">
         @csrf
-        @method('PUT')
+        @method('POST')
 
         <!-- Title (English) -->
         <div class="mb-4">
