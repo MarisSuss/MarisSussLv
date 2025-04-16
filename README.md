@@ -4,6 +4,10 @@ This project showcases my skills, projects, and experience as a full-stack devel
 
 ---
 
+🔗 **Live Site**: [marissuss.lv](https://marissuss.lv)
+
+---
+
 ## 🌟 **General Info**
 
 This portfolio website is designed to:
@@ -27,7 +31,7 @@ This portfolio website is designed to:
 ## 🚀 **Features**
 
 - **Dynamic Project Showcase**: Displays my projects with descriptions, images, and technologies used.
-- **Contact Form**: Allows visitors to send me messages directly, they are both sent to my email as well as saved in a database.
+- **Contact Form**: Allows visitors to send me messages directly. Messages are sent to my email and also stored in the database for reference.
 - **Admin Panel**: Secure area for managing posts and messages.
 - **Multi-language Support**: Available in English and Latvian.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
@@ -74,14 +78,14 @@ Follow these steps to set up the project locally:
 ### 2. **View a Project**
 ![Project](https://res.cloudinary.com/de7wfzvii/image/upload/v1744797892/6341cc1a-07cf-46bd-8820-6e73ee2672a1.png)
 
-### 3. **Sen Message**
+### 3. **Send a Message**
 ![Contact](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798044/177f2615-6508-4863-a926-37d6d6d083de.png)
 
 ### 4. **Admin Panel**
 ![Admin Panel](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798080/f1e9f61c-3957-443f-9abb-e0a5dc56601d.png)
 
-### 5. **Check Mail**
-![Check Mail](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798851/1003ad4a-8830-4b35-8243-391e78470af1.png)
+### 5. **Inbox**
+![Inbox](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798851/1003ad4a-8830-4b35-8243-391e78470af1.png)
 
 ### 6. **Create a new post**
 ![Create a new post](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798189/a8179fb2-418b-4a24-9d0d-9f261d13fe22.png)
