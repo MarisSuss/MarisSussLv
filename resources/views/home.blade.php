@@ -88,7 +88,7 @@
                                     {{ $language === 'en' ? $post->title_en : $post->title_lv }}
                                 </h4>
                                 <p class="text-lg">
-                                    {{ $language === 'en' ? $post->description_en : $post->description_lv }}
+                                    {! $language === 'en' ? $post->description_en : $post->description_lv !}
                                 </p>
                             </div>
                         </a>
