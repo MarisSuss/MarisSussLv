@@ -77,13 +77,13 @@ Follow these steps to set up the project locally:
 ### 3. **Sen Message**
 ![Contact](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798044/177f2615-6508-4863-a926-37d6d6d083de.png)
 
-### 3. **Admin Panel**
+### 4. **Admin Panel**
 ![Admin Panel](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798080/f1e9f61c-3957-443f-9abb-e0a5dc56601d.png)
 
-### 3. **Check Mail**
+### 5. **Check Mail**
 ![Check Mail](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798851/1003ad4a-8830-4b35-8243-391e78470af1.png)
 
-### 3. **Create a new post**
+### 6. **Create a new post**
 ![Create a new post](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798189/a8179fb2-418b-4a24-9d0d-9f261d13fe22.png)
 
 ---
