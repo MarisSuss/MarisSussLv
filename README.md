@@ -21,36 +21,16 @@ This portfolio website is designed to:
 - **Laravel 10**: Framework for building scalable and maintainable web applications.
 - **MySQL 8.0**: Database for storing posts, messages, and other data.
 - **Tailwind CSS**: For styling and responsive design.
-- **Alpine.js**: Lightweight JavaScript framework for interactivity.
-- **Cloudinary**: For hosting and managing images.
 
 ---
 
 ## 🚀 **Features**
 
 - **Dynamic Project Showcase**: Displays my projects with descriptions, images, and technologies used.
-- **Contact Form**: Allows visitors to send me messages directly.
+- **Contact Form**: Allows visitors to send me messages directly, they are both sent to my email as well as saved in a database.
 - **Admin Panel**: Secure area for managing posts and messages.
 - **Multi-language Support**: Available in English and Latvian.
 - **Responsive Design**: Optimized for both desktop and mobile devices.
-
----
-
-## 📸 **Showcase**
-
-Here are some example showcases from the website:
-
-### 1. **Login and Registration**
-![Login and Registration](https://res.cloudinary.com/de7wfzvii/image/upload/v1743769635/crypto_01_fxlncl.gif)
-
-### 2. **Project Search**
-![Project Search](https://res.cloudinary.com/de7wfzvii/image/upload/v1743769634/crypto_02_jo6tfw.gif)
-
-### 3. **Project Details**
-![Project Details](https://res.cloudinary.com/de7wfzvii/image/upload/v1743769634/crypto_03_aytmw7.gif)
-
-### 4. **Admin Panel**
-![Admin Panel](https://res.cloudinary.com/de7wfzvii/image/upload/v1743769633/crypto_04_cnba7f.gif)
 
 ---
 
@@ -70,22 +50,40 @@ Follow these steps to set up the project locally:
    npm install
    ```
 
-3. **Set Up the Database**:
-   - Create a new MySQL database.
-   - Import the provided `marissuss.sql` file.
-
-4. **Configure Environment**:
+3. **Configure Environment**:
    - Rename `.env.example` to `.env`.
    - Update the database credentials and other environment variables.
 
-5. **Run Migrations**:
+4. **Run Migrations**:
    ```bash
    php artisan migrate
    ```
 
-6. **Serve the Application**:
+5. **Serve the Application**:
    ```bash
    php artisan serve
    ```
+
+---
+
+## 📸 **Showcase**
+
+### 1. **Homepage**
+![Homepage](https://res.cloudinary.com/de7wfzvii/image/upload/v1744797842/342a967e-200e-4db3-b12d-f58c730cfa86.png)
+
+### 2. **Project**
+![Project](https://res.cloudinary.com/de7wfzvii/image/upload/v1744797892/6341cc1a-07cf-46bd-8820-6e73ee2672a1.png)
+
+### 3. **Contact**
+![Contact](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798044/177f2615-6508-4863-a926-37d6d6d083de.png)
+
+### 3. **Admin Panel**
+![Admin Panel](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798080/f1e9f61c-3957-443f-9abb-e0a5dc56601d.png)
+
+### 3. **Check Mail**
+![Check Mail](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798851/1003ad4a-8830-4b35-8243-391e78470af1.png)
+
+### 3. **Create a new post**
+![Create a new post](https://res.cloudinary.com/de7wfzvii/image/upload/v1744798189/a8179fb2-418b-4a24-9d0d-9f261d13fe22.png)
 
 ---
