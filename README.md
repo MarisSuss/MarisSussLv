@@ -44,8 +44,8 @@ Follow these steps to set up the project locally:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/MarisSuss/marissuss.lv
-   cd marissuss.lv
+   git clone https://github.com/MarisSuss/MarisSussLv
+   cd MarisSussLv
    ```
 
 2. **Install Dependencies**:
