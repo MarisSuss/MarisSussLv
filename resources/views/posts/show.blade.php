@@ -20,7 +20,7 @@
                     @endif
                 </div>
                 <p class="text-gray-300 mb-4">
-                    {{ $language === 'en' ? $post->description_en : $post->description_lv }}
+                    {{!! $language === 'en' ? $post->description_en : $post->description_lv !!}}
                 </p>
                 <div class="text-gray-300">
                     {!! $language === 'en' ? $post->content_en : $post->content_lv !!}
